@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-detergentes',
@@ -12,4 +13,11 @@ export class DetergentesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  verAlert(){
+    Swal.fire(
+     'Correcto!', // Título
+      'El producto se ha agregado al carrito', // Mensaje
+      'success' // Tipo de alerta
+    )
+  }
 }
